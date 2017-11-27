@@ -1,0 +1,53 @@
+﻿@model VeiculoModel
+
+@{
+    var listaModelos = (List<VeiculoModeloModel>)ViewBag.ListaModelos;
+    var listaCores = (List<VeiculoCor>) ViewBag.ListaCores;
+    Layout = "_Layout";
+}
+
+<h2>Cadastro de Novo Veiculo</h2>
+
+<div class="container">
+    <form asp-controller = "Locadora" asp-action="Inserir" method="post" >
+        <div>
+            Placa : <br>
+                <input asp-for="Placa"/>
+                </br>
+            Chassi: <br>
+                <input asp-for="Chassi"/>
+                </br>
+            Marca: <br>
+                <input type="" asp-for="Marca"/>
+                </br>
+            Modelo: <br>
+                <tbody>
+                    <select asp-for="Modelo.NomeModelo" >
+                    @foreach (var modelo in listaModelos)
+                    {
+                        <option value=@modelo.NomeModelo> @modelo.NomeModelo </option>
+                    }
+                    </select>
+                </tbody>
+            </br>
+            Ano de Fabricação:<br>
+                <input asp-for="DataFabricacao"/>
+                <br>
+            Cor:<br>
+            <tbody>
+                <ul>
+                    @foreach (var cor in listaCores)
+                    {
+                        <input asp-for="Cor.NomeCor" type="radio" value=@cor.NomeCor > @cor.NomeCor <br> 
+                    }
+                </ul>
+            </tbody>
+                <br>
+            </div>
+        <div>
+            <br>
+            <button type="submit" class="btn btn-success">Salvar</button>
+        </div>
+    </form>
+</div>
+

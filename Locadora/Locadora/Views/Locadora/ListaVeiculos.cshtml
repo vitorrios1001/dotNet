@@ -1,0 +1,59 @@
+﻿
+@{
+    var listaVeiculos = (List<VeiculoModel>) ViewBag.ListaVeiculos;
+    var listaModelos = (List<VeiculoModeloModel>)ViewBag.ListaModelos;
+    var listaCores = (List<VeiculoCor>) ViewBag.ListaCores;
+    Layout = "_Layout";
+}
+
+<h2>Lista de Veiculos</h2>
+
+
+<div>
+    <div>
+        <a asp-controller="Locadora" asp-action="Novo" class="btn btn-primary">Inserir novo carro</a>
+    </div>
+    <table class="table table-hover table-condensed">
+        <th>
+            <tr>
+                <td>Placa</td>
+                <td>Chassi</td>
+                <td>Modelo</td>
+                <td>Marca</td>
+                <td>Ano de Fabricação</td>
+                <td>Cor</td>
+            </tr>
+        </th>
+        <tbody>
+        
+        @foreach (var veiculo in listaVeiculos)
+        {
+            if (veiculo != null)
+            {
+            <tr>
+                <td>@veiculo.Placa</td>
+                <td>@veiculo.Chassi</td>
+                @foreach (var modelo in listaModelos)
+                {
+                    if (modelo.NomeModelo == @veiculo.Modelo.NomeModelo) 
+                    {
+                        <td>@modelo.NomeModelo</td>
+                    }
+                }
+                <td>@veiculo.Marca</td>
+                <td>@veiculo.DataFabricacao</td>
+                @foreach (var cor in listaCores)
+                {
+                     if (cor.NomeCor == @veiculo.Cor.NomeCor)
+                     {
+                         <td>@cor.NomeCor</td>   
+                     }
+                    
+                }
+            </tr>
+            }
+        }
+        </tbody>
+        
+    </table>
+</div>

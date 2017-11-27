@@ -1,0 +1,10 @@
+/home/vitor/RiderProjects/Locadora/Locadora/bin/Debug/netcoreapp2.0/Locadora.deps.json
+/home/vitor/RiderProjects/Locadora/Locadora/bin/Debug/netcoreapp2.0/Locadora.runtimeconfig.json
+/home/vitor/RiderProjects/Locadora/Locadora/bin/Debug/netcoreapp2.0/Locadora.runtimeconfig.dev.json
+/home/vitor/RiderProjects/Locadora/Locadora/bin/Debug/netcoreapp2.0/Locadora.dll
+/home/vitor/RiderProjects/Locadora/Locadora/bin/Debug/netcoreapp2.0/Locadora.pdb
+/home/vitor/RiderProjects/Locadora/Locadora/obj/Debug/netcoreapp2.0/Locadora.csproj.CoreCompileInputs.cache
+/home/vitor/RiderProjects/Locadora/Locadora/obj/Debug/netcoreapp2.0/Locadora.AssemblyInfoInputs.cache
+/home/vitor/RiderProjects/Locadora/Locadora/obj/Debug/netcoreapp2.0/Locadora.AssemblyInfo.cs
+/home/vitor/RiderProjects/Locadora/Locadora/obj/Debug/netcoreapp2.0/Locadora.dll
+/home/vitor/RiderProjects/Locadora/Locadora/obj/Debug/netcoreapp2.0/Locadora.pdb
